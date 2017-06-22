@@ -7,7 +7,7 @@
   planet.loadPlugin(autocenter({extraHeight: -120}));
   planet.loadPlugin(autoscale({extraHeight: -120}));
   planet.loadPlugin(planetaryjs.plugins.earth({
-    topojson: { file:   '/world-110m.json' },
+    topojson: { file:   'example/quake/world-110m.json' },
     oceans:   { fill:   '#0457B7' },
     land:     { fill:   '#7DB4F4' },
     borders:  { stroke: '#0457B7' }
@@ -34,8 +34,8 @@
   // minimum magnitude in our data set is 2.5.
   var colors = d3.scale.pow()
     .exponent(3)
-    .domain([2, 4, 6, 8, 10])
-      .range(['white', '#7DB4F4', '#7DB4F4', 'red', 'purple']);
+    .domain([2,8])
+      .range(['#7DB4F4','#7DB4F4']);
   // Also create a scale for mapping magnitudes to ping angle sizes
   var angles = d3.scale.pow()
     .exponent(3)
